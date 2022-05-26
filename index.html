@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlaces a la API de fuentes de Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- Enlace al archivo css para formatos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Vets</title>
+    <!-- Enlace a iconos fontawesone-->
+    <script src="https://kit.fontawesome.com/1e0ec3ed9f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- MENU NAVEGACION y LOGO -->
+    <header>
+        <div class="header--logo">
+            <img src="./img/logoblanco.png" alt="logo">
+        </div>
+        <div class="hamburger">
+            <div class="_layer -top"></div>
+            <div class="_layer -mid"></div>
+            <div class="_layer -bottom"></div>
+        </div>
+        <nav class="menuppal">
+            <ul>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Servicios</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Imagen de onda -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#0099ff" fill-opacity="1"
+            d="M0,256L120,229.3C240,203,480,149,720,133.3C960,117,1200,139,1320,149.3L1440,160L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z">
+        </path>
+    </svg>
+
+    <!-- ZONA PRINCIPAL DE LA PAGINA -->
+    <main>
+        <div class="presentacion">
+            <h1>¿Qué ofrecemos?</h1>
+        </div>
+        <!-- CONTENEDOR SERVICIOS CALL ACTION -->
+        <div class="presentacion--servicios">
+            
+            <div class="presentacion--servicios__vacunas">
+                <figure class="snip1361">
+                    <img src="./img/vacunas.png" alt="vacunas" />
+                    <figcaption>
+                      <h3>Vacunas</h3>
+                      <p>Por la salud de nuestras mascotas.</p>
+                    </figcaption>
+                    <a href="#"></a>
+                </figure>
+            </div>
+            <div class="presentacion--servicios__vacunas">
+                <figure class="snip1361">
+                    <img src="./img/cirujia.png" alt="cirujia" />
+                    <figcaption>
+                      <h3>Cirujia</h3>
+                      <p>Servicio completo de cirujia. Desde análisis previos hasta posoperatorio.</p>
+                    </figcaption>
+                    <a href="#"></a>
+                </figure>
+            </div>
+            <div class="presentacion--servicios__vacunas">
+                <figure class="snip1361">
+                    <img src="./img/dermato.png" alt="dermatologia" />
+                    <figcaption>
+                      <h3>Dermatologia</h3>
+                      <p>Piel. El organo más grande de cualquier ser vivo. Disponemos de especialistas en esta materia</p>
+                    </figcaption>
+                    <a href="#"></a>
+                </figure>
+            </div>
+            <div class="presentacion--servicios__vacunas">
+                <figure class="snip1361">
+                    <img src="./img/visitas.png" alt="visitas" />
+                    <figcaption>
+                      <h3>Visitas</h3>
+                      <p>Los mejores profesionalesresolveran todas las dudas y necesidades de su mascota</p>
+                    </figcaption>
+                    <a href="#"></a>
+                </figure>
+            </div>
+        </div>
+
+        <!-- SLIDER FOTOS -->
+        <div class="slideshow-container">
+
+            <!-- Contenedores imagenes con numero -->
+            <div class="mySlides fade">
+                <div class="numerodefoto">1 / 9</div>
+                <img src="./img/slider1.png" style="width:100%">
+                <div class="text">1</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numerodefoto">2 / 9</div>
+                <img src="./img/slider2.png" style="width:100%">
+                <div class="text">2</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numerodefoto">3 / 9</div>
+                <img src="./img/slider3.png" style="width:100%">
+                <div class="text">3</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numerodefoto">4 / 9</div>
+                <img src="./img/slider4.png" style="width:100%">
+                <div class="text">4</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numerodefoto">5 / 9</div>
+                <img src="./img/slider5.png" style="width:100%">
+                <div class="text">5</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numerodefoto">6 / 9</div>
+                <img src="./img/slider6.png" style="width:100%">
+                <div class="text">6</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numerodefoto">7 / 9</div>
+                <img src="./img/slider6.png" style="width:100%">
+                <div class="text">7</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numerodefoto">8 / 9</div>
+                <img src="./img/slider8.png" style="width:100%">
+                <div class="text">8</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numerodefoto">9 / 9</div>
+                <img src="./img/slider9.png" style="width:100%">
+                <div class="text">9</div>
+            </div>
+
+            <!-- Botones siguiente y anterior-->
+            <!-- Utilizamos el evento onclick para llamar a la funcion plusSlides -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <!-- Llamada a la funcion plusSlides, resta 1 para ir hacia atras-->
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <!-- Llamada a la funcion plusSlides, suma 1 para ir hacia delante-->
+        </div>
+        <br>
+
+        <!-- circulos -->
+        <!-- Funcion currentSlide(numero) indica la foto en la que se encuentra para generar el indice-->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+        </div>
+
+        <!-- ZONA DE PRODUCTOS -->
+        <div class="productos">
+            <h2>Nuestros Servicios</h2>
+            <div class="productos--principal">
+                <div class="productos--principal__imagen">
+                    <p>Urgencias</p>
+                    <img src="./img/servicio-consulta.jpg" alt="consulta">
+                </div>
+                <div class="productos--principal__imagen">
+                    <p>Alimentación</p>
+                    <img src="./img/servicio-alimentacion.jpeg" alt="alimentacion">
+                </div>
+                <div class="productos--principal__imagen">
+                    <p>Dermatología</p>
+                    <img src="./img/servicio-dermato.jpg" alt="dermatologia">
+                </div>
+                <div class="productos--principal__imagen">
+                    <p>Etología</p>
+                    <img src="./img/servicio-etologia.png" alt="etologia">
+                </div>
+                <div class="productos--principal__imagen">
+                    <p>Oftalmología</p>
+                    <img src="./img/servicio-ofta.jpg" alt="oftalmologia">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CONTACTO y FOMULARIO -->
+        <div class="contacto">
+            <div class="contacto--datos">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cum explicabo a voluptate
+                        suscipit obcaecati quos sit facere illo, necessitatibus dicta ut, distinctio quasi? Ratione esse
+                        harum eum debitis corrupti. Doloribus cum explicabo a voluptate suscipit obcaecati quos sit
+                        facere illo, necessitatibus dicta ut, distinctio quasi? Ratione esse harum eum debitis corrupti.
+                    </p>
+                </div>
+                <div class="contacto--datos__calle">
+                    <p>C/ Del veterinario s/n</p>
+                    <p>Castelldefels</p>
+                    <p>08015 Barcelona</p>
+                    <p>teléfono: 935556677</p>
+                    <p>Horario: L a V -> 09:30 - 18:30</p>
+                    <p>Sabados: 10:00 - 13:30</p>
+                </div>
+
+            </div>
+
+            <!-- FORMULARIO -->
+            <!-- Se usa la API de validación HTML junto con javascript para validacion email-->
+            <div class="sobrenosotros--formulario">
+                <form id="form" class="form">
+                    <h2>Contacta con nosotros</h2>
+                    <div class="form-control">
+                      <label for="nombre">Nombre</label>
+                      <input type="text" id="nombre" placeholder="Nombre" />
+                      <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                      <label for="email">Email</label>
+                      <input type="text" id="mail" placeholder="Correo electrónico" />
+                      <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                      <label for="Telefono">Telefono</label>
+                      <input type="tel" id="telefono" placeholder="Telefono" />
+                      <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                      <label for="Pregunta">Pregunta</label>
+                      <input
+                        type="text"
+                        id="pregunta"
+                        placeholder="Tu pregunta"
+                      />
+                      <small>Error message</small>
+                    </div>
+                    <button type="submit">Enviar</button>
+                  </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- ZONA OPINIONES -->
+    <div class="testimonial-container">
+      <div class="progress-bar"></div>
+      <div class="fas fa-quote-right fa-quote"></div>
+      <div class="fas fa-quote-left fa-quote"></div>
+      <p class="testimonial">
+        He acudido muchas veces y siempre me han atendido profesionalmente.
+        Cualquier duda es resuelta con prontitud y el trato a mi mascota es exquisito.
+      </p>
+      <div class="user">
+        <img
+          src="https://randomuser.me/api/portraits/women/54.jpg"
+          alt="user"
+          class="user-image"
+        />
+        <div class="user-details">
+          <h4 class="username">Antonia González</h4>
+          <p class="role">Cliente</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- PIE DE PAGINA -->
+    <footer>
+        <div class="footer">
+
+
+            <div class="redes-sociales">
+                <i class="fab fa-twitter fa-3x"></i>
+                <i class="fab fa-facebook-f fa-3x"></i>
+                <i class="fab fa-instagram fa-3x"></i>
+                <i class="fab fa-whatsapp fa-3x"></i>
+                <i class="far fa-paper-plane fa-3x"></i>
+            </div>
+
+
+        </div> <!-- Efecto onda-->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#0099ff" fill-opacity="1"
+                d="M0,256L120,229.3C240,203,480,149,720,133.3C960,117,1200,139,1320,149.3L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+            </path>
+        </svg>
+
+    </footer>
+
+    <!-- Enlace al archivo javascript-->
+    <script src="./js/slider.js"></script> <!-- Script carrusel fotografias -->
+    <script src="./js/menuhamburguer.js"></script> <!-- Script menú tipo hamburguesa -->
+    <script src="./js/testimonios.js"></script> <!-- Script testimonios -->
+    <script src="./js/validacionformulario.js"></script> <!-- Script validación formularios -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> <!-- JQuery -->
+    <script  src="./js/callaction.js"></script> <!-- Efecto en fotos call action -->
+</body>
+
+</html>

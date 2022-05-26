@@ -1,0 +1,636 @@
+/* RESET */
+/* Reseteamos el navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Propiedades personalizadas. Variables definidas que usaremos en la página */
+  --negro: #000000;
+  --blanco: #FFFFFF;
+  --amarillo: #FFC300;
+  --amarilloclaro: #e4d9b6;
+  --azul: #0099FF;
+
+  --fuente: 'Open Sans', sans-serif;
+}
+
+/* Aspecto para toda la web */
+html {
+  box-sizing: border-box;
+  /* La caja abarca entera marging, padding y border*/
+  font-size: 62, 5%;
+  /* Para poder utilizar rem proporciponales*/
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/** GLOBALES **/
+/* Se ejecuta en toda las etiquetas indicadas por defecto  */
+
+h1, h2, h3 {
+  font-family: var(--fuente);
+  color: var(--negro)
+}
+ 
+img { /*Imagenes al 100%*/
+  width: 100%;
+}
+
+a { /* Enlaces sin linea */
+  text-decoration: none;
+  color: var(--blanco);
+}
+
+/* HEADER MENU */
+
+header {
+  display: flex;
+  /* Flex contiene a Menu y Logo */
+  background-color: var(--azul);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header--logo {
+  margin-left: 4rem;
+  margin-top: 1.5rem;
+}
+
+.hamburger {
+  /* Menu tipo hamburguesa caracteristicas*/
+  position: fixed;
+   /*Fixed hara que el menu siempre se encuentre en la misma parte de la ventana, dando
+  la sencación de desplazarse conforme movemos la página*/
+  background-color: transparent;
+  right: 3rem;
+  top: 3rem;
+  height: 30px;
+  width: 30px;
+  padding: 20px 20px;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  z-index: 1002;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+.hamburger.is-active {
+  background-color: none;
+}
+
+._layer {
+  /* Caracteristicas barras del menu */
+  background: #000;
+  margin-bottom: 4px;
+  border-radius: 2px;
+  width: 28px;
+  height: 4px;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0); /* Rotar elementos */
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+}
+
+.hamburger:hover .-top {
+  -webkit-transform: translateY(-100%); /*Rotar elementos eje Y*/
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.hamburger:hover .-bottom {
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+/* Se aplica regla !important para dar prioridad sobre el resto de reglas*/
+/* rotate, recrea el efecto de giro del diseño de barras del menu*/
+.hamburger.is-active .-top {
+  -webkit-transform: translateY(200%) rotate(45deg) !important;
+  -ms-transform: translateY(200%) rotate(45deg) !important;
+  transform: translateY(200%) rotate(45deg) !important;
+}
+
+.hamburger.is-active .-mid {
+  opacity: 0;
+}
+
+.hamburger.is-active .-bottom {
+  -webkit-transform: translateY(-200%) rotate(135deg) !important;
+  -ms-transform: translateY(-200%) rotate(135deg) !important;
+  transform: translateY(-200%) rotate(135deg) !important;
+}
+
+.menuppal.is_active {
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.menuppal { /*Caracteristicas menu se abre al pulsar en la hamburguesa */
+  background-color: rgba(255, 255, 255, 0.95);
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  transform: translate3d(0px, -100%, 0px);
+  transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+  width: 100%;
+  z-index: 1001;
+}
+
+.menuppal ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menuppal ul li {
+  list-style: none;
+  text-align: center;
+  font-family: Verdadna, Arial, Helvetica;
+  color: nav-color-text;
+  font-size: 1.5rem;
+  line-height: 3em;
+  height: 3em;
+  color: #369;
+  text-transform: none;
+  font-weight: bold;
+}
+
+.menuppal ul li a {
+  text-decoration: none;
+  color: #369;
+}
+
+.menuppal ul li a:hover {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Caracteristicas zona principal de la página */
+.presentacion h1 {
+  font-size: 3rem;
+  font-family: var(--fuente);
+  font-style: bold;
+  color: var(--azul);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Efectos CSS junto con JavaScript para imagenes servicios.
+Tambien se importan fuentes de la API de google */
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Quattrocento);
+.snip1361 {
+  font-family: 'Quattrocento', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #141414;
+  text-align: left;
+  line-height: 1.4em;
+  font-size: 16px;
+}
+.snip1361 * { /* aplicado a todos los elementos con la clase snip1361 */
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip1361 img { /* aplicado a las imagenes */
+  max-width: 100%;
+  vertical-align: top;
+}
+.snip1361 figcaption { /*Aplicado al título */
+  position: absolute;
+  top: calc(77%);
+  width: 100%;
+  background-color: #ffffff;
+  padding: 15px 25px 65px;
+}
+.snip1361 figcaption:before { /* Aplicado al titulo antes de .. */
+  position: absolute;
+  content: '';
+  z-index: 2;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-image: -webkit-linear-gradient(top, transparent 0%, #ffffff 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
+}
+.snip1361 h3,
+.snip1361 p {
+  margin: 0 0 10px;
+}
+.snip1361 h3 {
+  font-weight: 300;
+  font-size: 1.4em;
+  line-height: 1.2em;
+  font-family: 'Oswald', Arial, sans-serif;
+  text-transform: uppercase;
+}
+.snip1361 p {
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+.snip1361 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.snip1361:hover figcaption, /* Aquí se aplica el script callaction de la carpeta js*/
+.snip1361.hover figcaption {
+  top: 80px;
+}
+/* Fin servicios con efectos Javascript */
+
+.presentacion--servicios {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+/* Se aplica a las imagenes en el contenedor servicios */
+.presentacion--servicios__vacunas img {
+  object-fit: cover;
+  height: 300px;
+  width: 300px;
+  display: block;
+}
+
+/* Se aplica a los parrafos en el contenedor servicios */
+.presentacion--servicios__vacunas p {
+  font-size: 24px;
+  font-family: var(--fuente);
+  color: var(--azul);
+  text-align: center;
+}
+
+/*SLIDER*/
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Esconder imagenes por defecto */
+.mySlides {
+  display: none;
+}
+
+/* Botones antes y despues */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Posicionar boton siguiente a la derecha */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Cursor encima un efecto de oscurecer en negro */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Texto del titulo de la foto */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Numero de la foto */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Los circulos indicadores */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Animación de una foto a otra*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/* PRODUCTOS */
+
+.productos h2 {
+  font-size: 3rem;
+  font-family: var(--fuente);
+  font-style: bold;
+  color: var(--azul);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/*Montamos un flex contenedor padre*/
+.productos--principal {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px 200px;
+  overflow: hidden;
+}
+
+/*ajustamos imagenes al tamaño del contenedor*/
+.productos--principal img {
+  object-fit: fill;
+  height: 150px;
+  width: 150px;
+  background-color: var(--azul);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/*ajustes del texto bajo las imagenes*/
+.productos--principal p {
+  font-family: var(--fuente);
+  font-size: 20px;
+  color: var(--azul);
+  text-align: center;
+}
+
+/* CONTACTO Y FORMULARIO */
+
+.contacto {
+  display: flex;
+  /*FLEX en el contenedor padre */
+  max-width: 1300px;
+  background-color: #FFF;
+  margin: 40px auto 0 auto;
+  line-height: 1.65;
+  /* Interlineado */
+  padding: 20px 50px;
+}
+
+.contacto--datos {
+  /* Proporcion queremos que ocupe */
+  flex: 2;
+  background-color: var(--azul);
+  font-family: var(--fuente);
+  font-size: 20px;
+  color: var(--blanco);
+  text-align: justify;
+  padding: 1rem 2rem;
+  /* Separamos texto de los bordes*/
+  box-shadow: 0 0 40px -10px #000;
+  /* Sombreado*/
+}
+
+.contacto--datos__calle {
+  /*Contenedor datos de contacto*/
+  text-align: center;
+  padding: 2rem 2rem;
+  align-items: center;
+}
+
+/* FORMULARIO */
+
+/* CSS general del formulario */
+.sobrenosotros--formulario {
+  background-color: rgb(138, 195, 242);
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+.form {
+  padding: 30px 40px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  color: #777;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+/* CSS cuando estamos sobre el campo del formulario */
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+/*Color borde campo cuando es correcto*/
+.form-control.success input {
+  border-color: rgb(15, 231, 18);
+}
+/*Color borde campo cuando es erroneo*/
+.form-control.error input {
+  border-color: rgb(235, 15, 15);
+}
+
+/*Color del mensaje debajo de los cajetines cuando campo es erroeno*/
+.form-control small {
+  color:rgb(235, 15, 15);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+/*Al ser campo erronea se hara visible*/
+.form-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  cursor: pointer;
+  background-color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* ZONA TESTIMONIOS */
+.testimonial-container {
+  background-color: var(--azul);
+  color: #fff;
+  border-radius: 15px;
+  margin: 150px auto;
+  padding: 50px 80px;
+  max-width: 800px;
+  position: relative;
+}
+
+.fa-quote { /*Comillas en container testimoios */
+  color: rgba(255, 255, 255, 0.3);
+  font-family: var(--fuente);
+  font-size: 30px;
+  position: absolute;
+  top: 70px;
+}
+
+.fa-quote-right { /*Comillas derecha*/
+  left: 40px;
+}
+
+.fa-quote-left { /*Comillas izquierda*/
+  right: 40px;
+}
+
+.testimonial {
+  line-height: 1.75rem; /*Interlineado testimonios*/
+  font-family: var(--fuente);
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user .user-image { /* imagen del usuario testimonio */
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  object-fit: cover;
+}
+
+.user .user-details {
+  margin-left: 10px;
+}
+
+.user .username {
+  margin: 0;
+}
+
+.user .role {
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+.progress-bar { /* Barra de progreso del tiempo en cuadro testimonios*/
+  background-color: #fff;
+  height: 4px;
+  width: 100%;
+  animation: grow 10s linear infinite;
+  transform-origin: left;
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-container {
+    padding: 20px 30px;
+  }
+
+  .fa-quote {
+    display: none;
+  }
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  /*Flex contenedor padre iconos redes sociales*/
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  /*Ancho maximo*/
+  margin: 20px auto;
+}
+
+.redes-sociales i {
+  margin: 0 5px;
+  /*Separacion entre iconos*/
+}
